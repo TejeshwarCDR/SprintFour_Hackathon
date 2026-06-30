@@ -3,7 +3,7 @@ import { detectWithOntology } from './detection/ontologyDetector.js';
 import { reconcileSpans } from './reconciliation.js';
 import { buildRedactedText } from '../utils/redaction.js';
 import { toRedactedTxtFilename } from '../utils/filename.js';
-import { conflict, notFound, unprocessable } from '../errors/AppError.js';
+import { conflict, notFound } from '../errors/AppError.js';
 import { mapAuditFromDb, mapDocumentFromDb, mapSpanFromDb } from '../utils/caseMapper.js';
 import { DocumentsRepository } from '../repositories/documentsRepository.js';
 import { SpansRepository } from '../repositories/spansRepository.js';
@@ -163,13 +163,6 @@ export class DocumentService {
     const document = await this.getDocumentOrThrow(documentId);
     if (document.status === 'committed') {
       return { status: 'committed', outputText: buildRedactedText(document.raw_text, await this.spansRepository.listByDocumentId(documentId)) };
-    }
-
-    const unresolvedHighRisk = await this.spansRepository.listPendingHighRisk(documentId);
-    if (unresolvedHighRisk.length > 0) {
-      throw unprocessable('cannot commit while high-risk spans are unresolved', {
-        unresolvedHighRiskSpanIds: unresolvedHighRisk.map((span) => span.id),
-      });
     }
 
     const spans = await this.spansRepository.listByDocumentId(documentId);
