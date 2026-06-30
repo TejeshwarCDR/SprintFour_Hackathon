@@ -1,0 +1,38 @@
+/* ============================================================
+   Signuture — base resets & helpers (safe, opt-in)
+   ============================================================ */
+
+.sig-root,
+.sig-page {
+  background: var(--bg-page);
+  color: var(--text-primary);
+  font-family: var(--font-body);
+  font-size: var(--fs-body);
+  line-height: var(--lh-normal);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Display headings use the serif */
+.sig-display { font-family: var(--font-display); font-weight: var(--fw-display-bold); line-height: var(--lh-tight); letter-spacing: var(--ls-tight); color: var(--text-primary); }
+.sig-script  { font-family: var(--font-script); font-weight: 400; }
+
+/* Eyebrow / overline */
+.sig-overline {
+  font-family: var(--font-body);
+  font-size: var(--fs-overline);
+  font-weight: var(--fw-semibold);
+  letter-spacing: var(--ls-overline);
+  text-transform: uppercase;
+  color: var(--gold-700);
+}
+
+/* Subtle paper texture utility (warm grain via layered gradients) */
+.sig-paper {
+  background-color: var(--cream-100);
+  background-image:
+    radial-gradient(rgba(22,38,61,0.018) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+::selection { background: var(--gold-200); color: var(--blue-900); }

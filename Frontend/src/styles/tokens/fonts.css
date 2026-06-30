@@ -1,0 +1,13 @@
+/* ============================================================
+   Signuture — Webfonts
+   Loaded from Google Fonts (nearest matches to the brand brief).
+   See README "Typography" — flag to user if licensed brand
+   fonts should replace these.
+   ------------------------------------------------------------
+   Cormorant Garamond — emotional, premium display serif
+   Hanken Grotesk     — warm, trustworthy humanist body sans
+   Pinyon Script      — calligraphic signature for the wordmark
+   JetBrains Mono     — tokens, code, data labels
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Hanken+Grotesk:wght@400;500;600;700;800&family=Pinyon+Script&family=JetBrains+Mono:wght@400;500;600&display=swap');

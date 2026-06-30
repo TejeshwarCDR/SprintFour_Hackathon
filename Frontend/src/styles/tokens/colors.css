@@ -1,0 +1,136 @@
+/* ============================================================
+   Signuture — Color tokens  ·  v3 "Inkwell"
+   A premium, emotional palette for a product that crafts your
+   identity. Fountain-pen INK navy, antique BRASS for the seal,
+   and a warm neutral BONE paper. Deep, considered, handcrafted —
+   never bright, never corporate, never yellow-cream.
+
+   NOTE ON NAMING: the ramps keep their structural names
+   (--ink-* navy, --brass-* gold, --paper-* bone). The legacy
+   --blue-* / --gold-* / --cream-* names are preserved as
+   1:1 aliases so existing components keep working — prefer the
+   semantic aliases at the bottom of this file in new work.
+   ============================================================ */
+
+:root {
+  /* ---- Paper (warm neutral bone — the calm ground of every surface) ---- */
+  --paper-50:  #FCFBF9;
+  --paper-100: #F7F5F1; /* canonical page background — warm bone, not yellow */
+  --paper-200: #F0EDE6;
+  --paper-300: #E5E0D6;
+  --paper-400: #D6D0C2;
+
+  /* ---- Ink (deep fountain-pen navy — trust, intelligence, the signature) ---- */
+  --ink-950: #0E1626; /* near-black ink — strongest contrast */
+  --ink-900: #15223A; /* headings / strong display text on paper */
+  --ink-800: #1D3052;
+  --ink-700: #263F6A;
+  --ink-600: #2D4B82; /* primary action — deep, confident ink */
+  --ink-500: #3E5E97;
+  --ink-400: #6C83B1;
+  --ink-300: #A6B4D0;
+  --ink-200: #D2D9E7;
+  --ink-100: #EAEEF5;
+
+  /* ---- Brass (antique champagne-gold — craft, achievement, the "signed" moment) ---- */
+  --brass-800: #6B4E18;
+  --brass-700: #8A6722; /* small overline / accent text (kept legible on paper) */
+  --brass-600: #A9853A;
+  --brass-500: #C19A4B; /* primary brass / seal */
+  --brass-400: #D4B473;
+  --brass-300: #E3CB9C;
+  --brass-200: #EFDFC2;
+  --brass-100: #F8F0DF;
+
+  /* ---- Slate neutrals (text, lines) — warm-cool, harmonised to the ink ---- */
+  --slate-ink: #1B2436;  /* body text — deep warm slate, soft not black */
+  --slate-700: #3E4A60;  /* secondary text */
+  --slate-500: #6A7488;  /* muted text */
+  --slate-400: #969FB0;
+  --line-300:  #E4DFD5;  /* warm hairline border */
+  --line-200:  #EDE9E0;
+  --white:     #FFFFFF;
+
+  /* ---- Semantic accents (fresh, harmonised to the warm ground) ---- */
+  --success-600: #2F8F63;
+  --success-100: #DCEFE3;
+  --danger-600:  #C4573D; /* warm terracotta */
+  --danger-100:  #F6E2DA;
+  --warning-600: #C2912F;
+  --warning-100: #F6EBD2;
+  --info-600:    #2D4B82;
+  --info-100:    #EAEEF5;
+
+  /* ============================================================
+     Legacy aliases — keep older components/cards working 1:1.
+     (--blue → ink · --gold → brass · --cream → paper)
+     ============================================================ */
+  --cream-50:  var(--paper-50);
+  --cream-100: var(--paper-100);
+  --cream-200: var(--paper-200);
+  --cream-300: var(--paper-300);
+  --cream-400: var(--paper-400);
+
+  --blue-950: var(--ink-950);
+  --blue-900: var(--ink-900);
+  --blue-800: var(--ink-800);
+  --blue-700: var(--ink-700);
+  --blue-600: var(--ink-600);
+  --blue-500: var(--ink-500);
+  --blue-400: var(--ink-400);
+  --blue-300: var(--ink-300);
+  --blue-200: var(--ink-200);
+  --blue-100: var(--ink-100);
+
+  --gold-800: var(--brass-800);
+  --gold-700: var(--brass-700);
+  --gold-600: var(--brass-600);
+  --gold-500: var(--brass-500);
+  --gold-400: var(--brass-400);
+  --gold-300: var(--brass-300);
+  --gold-200: var(--brass-200);
+  --gold-100: var(--brass-100);
+
+  --ink-900-legacy: var(--slate-ink); /* (old --ink-900 was body text) */
+
+  /* ============================================================
+     Semantic aliases — REFERENCE THESE in components & new work
+     ============================================================ */
+  --bg-page:         var(--paper-100);
+  --bg-page-alt:     var(--paper-200);
+  --surface-card:    var(--paper-50);
+  --surface-raised:  var(--white);
+  --surface-sunken:  var(--paper-200);
+  --surface-inverse: var(--ink-900);
+
+  --text-primary:   var(--slate-ink);
+  --text-secondary: var(--slate-700);
+  --text-muted:     var(--slate-500);
+  --text-on-ink:    var(--paper-50);
+  --text-on-brass:  var(--ink-900);
+  --text-link:      var(--ink-600);
+  /* legacy text-on names */
+  --text-on-blue:   var(--paper-50);
+  --text-on-gold:   var(--ink-900);
+
+  --border-default: var(--line-300);
+  --border-subtle:  var(--line-200);
+  --border-strong:  var(--ink-200);
+
+  --action-primary:       var(--ink-600);
+  --action-primary-hover: var(--ink-700);
+  --action-primary-press: var(--ink-800);
+  --accent-brass:         var(--brass-500);
+  --accent-brass-hover:   var(--brass-600);
+  --accent-gold:          var(--brass-500); /* legacy alias */
+  --accent-gold-hover:    var(--brass-600); /* legacy alias */
+  --focus-ring:           var(--brass-300);
+
+  /* ---- Signature gradients (premium, warm, restrained) ---- */
+  --grad-daylight: linear-gradient(150deg, var(--ink-100) 0%, var(--paper-100) 50%, var(--brass-100) 100%);
+  --grad-atelier:  linear-gradient(150deg, var(--ink-100) 0%, var(--paper-100) 50%, var(--brass-100) 100%);
+  --grad-gold:     linear-gradient(90deg, var(--brass-400), var(--brass-600));
+  --grad-brass:    linear-gradient(90deg, var(--brass-400), var(--brass-600));
+  --grad-sky:      linear-gradient(150deg, #F1F4FA 0%, var(--paper-50) 100%);
+  --grad-ink:      linear-gradient(155deg, var(--ink-900) 0%, var(--ink-800) 60%, var(--ink-950) 100%);
+}
