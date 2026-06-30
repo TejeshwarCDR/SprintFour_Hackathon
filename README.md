@@ -1,6 +1,6 @@
-# Conseal
+# Ontology-Driven Knowledge-Based PII Redaction System
 
-**A document redaction review system built around one core idea: a redaction is only trustworthy if you can verify why it happened.**
+**A document redaction review system powered by ontology-driven knowledge and AI, built around one core idea: a redaction is only trustworthy if you can verify why it happened.**
 
 Built for the Sprintfour Hackathon. Solves all three problem tracks — explainability (Marcus), correction at volume (Sam), and high-throughput review (Maya) — from a single hybrid detection architecture, rather than three separate features bolted together.
 
